@@ -1,5 +1,8 @@
 const ulEl = document.createElement("ul");
 //Creo, solo in memoria, il nodo <ul>
+const mail_box = document.getElementById("mail")
+//seleziono il nodo dove inserire la lista
+const btn_list = document.getElementById("btn-list")
 for (let i = 0; i < 10; i++) {
   //Ciclo for che vanza 10 volte
   axios
@@ -18,6 +21,6 @@ for (let i = 0; i < 10; i++) {
       ulEl.appendChild(liEl);
       //Assegno il nodo <li> come figlio del nodo <ul>
     });
-  document.body.appendChild(ulEl);
+  mail_box.appendChild(ulEl);
   //Appendo il nodo <ul>, e relativi figli, al documento
 }
